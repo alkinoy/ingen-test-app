@@ -8,20 +8,16 @@ use App\Domain\Exception\InvoiceNotFoundException;
 use App\Domain\Exception\InvoiceStatusChangeException;
 use App\Infrastructure\Controller;
 use App\Modules\Invoices\Api\InvoiceFacadeInterface;
-use App\Modules\Invoices\Application\Repository\InvoiceRepositoryInterface;
 use Illuminate\Http\Response;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
-use Throwable;
 
 class InvoiceController extends Controller
 {
-
     public function __construct(
         private readonly InvoiceFacadeInterface $invoiceFacade,
         private readonly LoggerInterface $logger,
-    )
-    {
+    ) {
     }
 
     public function show(string $id)
@@ -90,5 +86,4 @@ class InvoiceController extends Controller
             return response()->json('Unexpected exception. Error id is ' . $errorId, Response::HTTP_INTERNAL_SERVER_ERROR);
         }
     }
-
 }

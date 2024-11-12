@@ -14,8 +14,7 @@ class InvoiceService
 {
     public function __construct(
         private readonly InvoiceRepositoryInterface $repository
-    )
-    {
+    ) {
     }
 
 

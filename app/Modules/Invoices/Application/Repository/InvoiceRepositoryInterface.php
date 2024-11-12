@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Modules\Invoices\Application\Repository;
 
-use App\Domain\Roots\Invoice;
 use App\Modules\Invoices\Infrastructure\Model\InvoiceModel;
 use Ramsey\Uuid\UuidInterface;
 
